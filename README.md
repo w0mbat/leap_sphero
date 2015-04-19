@@ -1,14 +1,14 @@
-#Experiment using the Leap Motion to control the robotic Sphero ball.
+# Experiment using the Leap Motion to control the robotic Sphero ball.
 
-####To run this app, follow these steps:
+#### To run these apps, follow these steps:
 
 1. Clone this repo.
-2. Install node on your computer if you haven't already http://nodejs.org
+2. Install node on your computer if you haven't already http://nodejs.org (v0.12.x didn´t work for me, downgraded to 0.10.38).
 3. Run 'npm install' in your terminal to install the dependencies needed.
 4. To find the reference of the Sphero on your computer, run 'ls /dev/tty.Sphero*' in your Terminal and copy the path returned.
-5. Paste this path in the index.js file when the 'device' variable is declared.
+5. Paste this path in the index.js files within the my_modules folder when the 'device' variable is declared.
 6. Enable the bluetooth connection on your computer.
-7. Run 'node index.js' in your terminal.
+7. Run 'node gesture.js' or 'node handfollow.js' in your terminal.
 
 And you're done! You should see the Sphero connected in your terminal.
 
@@ -19,9 +19,8 @@ https://www.youtube.com/watch?v=3ratT1yCnow&feature=share&list=UUKZdVrHYWr7rVNKb
 
 Have fun and let me know if you have any issues or questions!
 
-
-
-##Current controls:
+## Gesture App - gesture.js
+### Current controls:
 
 * Move your fingers/hand UP to make the ball stop & turn blue.
 * Move your fingers/hand DOWN to turn the ball stop & turn white.
@@ -30,16 +29,7 @@ Have fun and let me know if you have any issues or questions!
 * Swipe left to make Sphero go left (heading of 270°)
 * Swipe right to make Sphero go right (heading of 90°)
 
+## Handfollowing App - handfollow.js
+### Current controls:
 
-
-##Previous notes from the original repo: 
-
-* Set `device` variable to whatever device Sphero connects to your machine has
-* There is a timeout of 2000ms to stop Sphero after each gesture to make sure it doesn't go to crazy
-* Set the variable `safeMode = false;` if you are trying it out in water, it's much more fun and Sphero is
-a bit more mellow when in liquid
-
-##Next steps:
-
-* Try to create modules to make the Sphero move following a pattern (ex: square).
-
+* Sphero will follow your hand - move it to the right, sphero will move to the right; move it in a circle, sphero will move in a circle; etc. pp

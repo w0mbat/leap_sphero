@@ -6,7 +6,7 @@ var express = require('express'),
 var app = express();
 
 //require the custom module
-var test = require('./my_modules/sphero');
+var test = require('./my_modules/handfollow');
 test();
 
 // Everything in public will be accessible from '/'
@@ -18,8 +18,4 @@ app.all('*', function(req, res){
 });
 
 app.listen(3001);
-console.log("server running on port 3001");
-
-
-
-
+console.log("Server running on port 3001");
